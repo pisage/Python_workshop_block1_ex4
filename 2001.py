@@ -18,7 +18,7 @@ user_dice_choice = int(input("Give the type of the roll (3, 4, 6, 8, 12, 20, 100
 if user_dice_choice in dice_type:
     user_roll = (random.randint(1, user_dice_choice)) + random.randint(1, user_dice_choice)
     if user_roll == 7:
-        user_points = user_points % 7
+        user_points = user_points // 7
     elif user_roll == 11:
         user_points = user_points * 11
     else:
@@ -40,7 +40,7 @@ while (int(comp_points) < 2001) or (int(user_points) < 2001):
     comp_dice_choice = int(random.choice(["3", "4", "6", "8", "10", "12", "20", "100"]))
     comp_roll = (random.randint(1, comp_dice_choice)) + (random.randint(1, comp_dice_choice))
     if comp_roll == 7:
-        comp_points = comp_points % 7
+        comp_points = comp_points // 7
     elif comp_roll == 11:
         comp_points = comp_points * 11
     else:
@@ -53,7 +53,7 @@ while (int(comp_points) < 2001) or (int(user_points) < 2001):
     if user_dice_choice in dice_type:
         user_roll = (random.randint(1, user_dice_choice)) + random.randint(1, user_dice_choice)
         if user_roll == 7:
-            user_points = user_points % 7
+            user_points = user_points // 7
         elif user_roll == 11:
             user_points = user_points * 11
         else:
